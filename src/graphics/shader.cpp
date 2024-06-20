@@ -9,7 +9,7 @@ static const char *LoadProgram(const std::string &programPath) {
 	}
 
 	file.seekg(0, std::ios::end);
-	std::streampos programSize = file.tellg();
+	size_t programSize = file.tellg();
 	file.seekg(0, std::ios::beg);
 
 	char *buffer = new char[programSize+1];
